@@ -9,6 +9,11 @@ Alex Beng's validation scripts(mainly python) for [cvat](https://github.com/Geng
 - [ ] template-match-based GI location
 - [ ] odemeter
 
+## sequence to path/trajectory
+
+- [ ] reused the Filter-based location
+- [ ] path/trajectory generation (algorithm needed)
+
 ## SLAM-based 3D-2D fusion
 
 - [ ] run the SLAM 
