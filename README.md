@@ -13,6 +13,8 @@ Alex Beng's validation scripts(mainly python) for [cvat](https://github.com/Geng
 
 - [ ] reused the Filter-based location
 - [ ] path/trajectory generation (algorithm needed)
+  
+## achor-based big map location
 
 ## SLAM-based 3D-2D fusion
 
