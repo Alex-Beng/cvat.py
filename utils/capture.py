@@ -83,9 +83,29 @@ class BitBltCapture(Capture):
 
 if __name__ == "__main__":
     capture = BitBltCapture()
-    imdata = capture.capture()
-    import cv2
-    cv2.imshow("test", imdata)
-    cv2.waitKey(0)
+    import time
+    from matplotlib import pyplot as plt
+    time_sum = 0
+    time_cnt = 0
+    times = []
+    while True:
+        beg_t = time.time()
+        imdata = capture.capture()
+        end_t = time.time()
+        import cv2
+        cv2.imshow("test", imdata)
+        k = cv2.waitKey(1)
+        times.append(1/(end_t-beg_t))
+        time_sum += (end_t - beg_t)
+        time_cnt += 1
+        print(f'\r{1/(end_t-beg_t):.2f}', end='')
+        if k == ord('q'):
+            break
     cv2.destroyAllWindows()
-    print(imdata.shape)
+        
+    print(f'\n{time_sum}')
+    print(f'\n{time_cnt}')
+    print(f'\n{time_cnt/time_sum:.2f}')
+    plt.plot(times)
+    plt.show()
+    
