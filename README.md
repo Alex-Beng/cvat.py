@@ -16,9 +16,9 @@ Alex Beng's validation scripts(mainly python) for [cvat](https://github.com/Geng
   
 ## anchor-based big map location
 
-- [] GI anchor detection
-- [] anchor data parser
-- [] RANSAC-based loaction
+- [ ] GI anchor detection
+- [ ] anchor data parser
+- [ ] RANSAC-based loaction
 
 ## SLAM-based 3D-2D fusion
 
