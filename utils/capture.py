@@ -19,9 +19,9 @@ def _find_window_local():
     return hwnd
 
 
-# 基类，负责Hwnd的获取
+# TODO: 兼容视频和图片流
 class Capture:
-    def __init__(self) -> None:
+    def _get_hwnd(self) -> None:
         self.hwnd = _find_window_local()
         if self.hwnd == 0:
             raise ValueError("未找到窗口")
@@ -43,7 +43,7 @@ class Capture:
 
 class BitBltCapture(Capture):
     def __init__(self) -> None:
-        super().__init__()
+        self._get_hwnd()
 
     def capture(self):
         gi_handle = self.hwnd
