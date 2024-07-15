@@ -2,6 +2,11 @@
 
 Alex Beng's validation scripts(mainly python) for [cvat](https://github.com/GengGode/cvAutoTrack)
 
+## setup
+
+This repo needs the opencv-python with `BUILD_opencv_python3`, `OPENCV_ENABLE_NONFREE` and `OPENCV_EXTRA_MODULES_PATH` enabled and manually installed.
+
+
 ## Filter-based Multi-source GI location
 
 - [ ] capture/video/other source
