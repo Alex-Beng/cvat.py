@@ -38,10 +38,9 @@ class ImagePyramid:
         return _py
 
 def get_map_names(root_path: str):
-    # 使用正则去匹配 UI_MapBack_{int}_{int}.png
-
-    # patten = re.compile(r"UI_MapBack_(\d+)_(\d+).png")
+    # 正则匹配 UI_MapBack_{int}_{int}.png
     # int 可以为负数
+    # patten = re.compile(r"UI_MapBack_(\d+)_(\d+).png")
     patten = re.compile(r"UI_MapBack_(-?\d+)_(-?\d+).png")
     map_names = []
     for file in os.listdir(root_path):
@@ -49,14 +48,15 @@ def get_map_names(root_path: str):
             # get the x, y
             x, y = patten.match(file).groups()
             map_names.append((file, int(x), int(y)))
-        # else:
-        #     print(f"Warning: {file} not match")
+        else:
+            print(f"Warning: {file} not match")
     return map_names
 
 def get_maps_feat(map_pys: dict[tuple[int, int], ImagePyramid]):
     # 1. 直接最逆天的方法，获得8邻域，拼成 2048*3 x 2048*3
     # 2. 同时维护一个 2048*3 x 2048*3 的mask当lut，用于最后的特征过滤
     # 3. 特征提取
+    #   3.1 分块双阈值
     # 4. 对pt进行过滤、坐标变换
 
     # get the x y range first
