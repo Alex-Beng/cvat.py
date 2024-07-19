@@ -13,6 +13,8 @@ This repo needs the opencv-python with `BUILD_opencv_python3`, `OPENCV_ENABLE_NO
 - [ ] feature-match GI location
 - [ ] template-match-based GI location
 - [ ] odemeter
+- [ ] filter-based or optimization-based location
+    - [ ] frameSLAM, only opt the pose without loop closure
 
 ## sequence to path/trajectory
 
