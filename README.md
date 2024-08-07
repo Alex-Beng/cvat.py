@@ -15,6 +15,7 @@ This repo needs the opencv-python with `BUILD_opencv_python3`, `OPENCV_ENABLE_NO
 - [ ] odemeter
 - [ ] filter-based or optimization-based location
     - [ ] frameSLAM, only opt the pose without loop closure
+    - [ ] opt in se(2) space.
 
 ## sequence to path/trajectory
 
