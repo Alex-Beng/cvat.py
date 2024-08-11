@@ -4,3 +4,5 @@
 /maps
 *.zip
 /*.png
+build
+.vscode
