@@ -6,6 +6,10 @@ Alex Beng's validation scripts(mainly python) for [cvat](https://github.com/Geng
 
 This repo needs the opencv-python with `BUILD_opencv_python3`, `OPENCV_ENABLE_NONFREE` and `OPENCV_EXTRA_MODULES_PATH` enabled and manually installed.
 
+## GI visual odometer
+- [ ] simple 2d frame-frame
+- [ ] frame-map
+
 
 ## Filter-based Multi-source GI location
 
@@ -13,6 +17,10 @@ This repo needs the opencv-python with `BUILD_opencv_python3`, `OPENCV_ENABLE_NO
 - [ ] feature-match GI location
 - [ ] template-match-based GI location
 - [ ] odemeter
+- [ ] filter-based or optimization-based location
+    - [ ] filter-based, simple KF
+    - [ ] with non-linear mouse model, ESKF.
+    - [ ] frameSLAM, only opt the pose without loop closure. opt in se(2) space.
 
 ## sequence to path/trajectory
 
