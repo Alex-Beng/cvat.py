@@ -30,6 +30,11 @@ print(row, col)
 for rb in range(0, row, L):
     for cb in range(0, col, L):
         img_block = img_gray[rb:rb+L, cb:cb+L]
+        img_block_neibor = np.zeros((3*L, 3*L), dtype=np.uint8)
+        img_block_neibor_mask = np.zeros((3*L, 3*L), dtype=np.uint8)
+        # 取八邻域
+        
+
         surf_keypoints, surf_des = surf.detectAndCompute(img_block, None)
         for kp in surf_keypoints:
             kp.pt = (kp.pt[0] + cb, kp.pt[1] + rb)
